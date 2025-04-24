@@ -1,45 +1,21 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-<title>Hartă Interactivă</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hartă Interactivă</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Leaflet CSS and JS --> 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> 
-<link rel="stylesheet" href="style.css"> 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+    <!-- Leaflet CSS and JS --> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> 
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
 
-<!-- PapaParse CSV Parser --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <!-- PapaParse CSV Parser --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-<style> 
-    #map { height: 600px; width: 100%; } 
-
-    /* Stilizare buton Instagram */
-    .instagram-button {
-        display: inline-flex;
-        align-items: center;
-        background-color: #E1306C;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-        margin-top: 20px;
-    }
-
-    .instagram-button img {
-        margin-right: 10px;
-        width: 24px;
-        height: 24px;
-    }
-
-    .instagram-button:hover {
-        background-color: #C42D63;
-    }
-</style>
+    <style> 
+        #map { height: 600px; width: 100%; } 
+    </style> 
 </head> 
 <body>
 
@@ -47,7 +23,7 @@
 <div id="map"></div> 
 
 <!-- Buton Instagram -->
-<div style="text-align: center;">
+<div class="center">
     <a href="https://www.instagram.com/username/" target="_blank" class="instagram-button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         Urmărește-mă pe Instagram
@@ -57,34 +33,39 @@
 <script> 
 // icons : 
 const icons = { 
-ok: L.icon({ 
-iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-iconSize: [25, 41],
-iconAnchor: [12, 41],
-popupAnchor: [1, -34],
-shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png', 
-shadowSize: [41, 41] }), 
-warning: L.icon({ 
-iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png', 
-iconSize: [25, 41], 
-iconAnchor: [12, 41], 
-popupAnchor: [1, -34], 
-shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png', 
-shadowSize: [41, 41] }), 
-bad: L.icon({ 
-iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png', 
-iconSize: [25, 41], 
-iconAnchor: [12, 41], 
-popupAnchor: [1, -34], 
-shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png', 
-shadowSize: [41, 41] }) }; 
+    ok: L.icon({ 
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png', 
+        shadowSize: [41, 41] 
+    }), 
+    warning: L.icon({ 
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png', 
+        iconSize: [25, 41], 
+        iconAnchor: [12, 41], 
+        popupAnchor: [1, -34], 
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png', 
+        shadowSize: [41, 41] 
+    }), 
+    bad: L.icon({ 
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png', 
+        iconSize: [25, 41], 
+        iconAnchor: [12, 41], 
+        popupAnchor: [1, -34], 
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png', 
+        shadowSize: [41, 41] 
+    }) 
+}; 
 
 // Initialize the map
-const map = L.map('map').setView([45.76, 21.23], 6);  // Center map as needed 
+const map = L.map('map').setView([45.76, 21.23], 6);  
 
 // Load tile layer (OpenStreetMap) 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map); 
-const legend = L.control({ position: 'bottomright' }); 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+
+const legend = L.control({ position: 'bottomright' });
 
 legend.onAdd = function (map) { 
     const div = L.DomUtil.create('div', 'info-legend'); 
@@ -98,7 +79,7 @@ legend.onAdd = function (map) {
 }; 
 legend.addTo(map);
 
-// URL of the CSV file on your server 
+// CSV file URL
 const csvUrl = 'https://raw.githubusercontent.com/popsaraizabela/CyberPeak-harta-interactiva/load-locations-from-csv/locations.csv'; 
 
 // Fetch and parse the CSV 
@@ -106,24 +87,24 @@ fetch(csvUrl)
 .then(response => response.text()) 
 .then(csvText => { 
     Papa.parse(csvText, {
-    header: true,
-    skipEmptyLines: true, 
-    complete: function(results) { 
-        const data = results.data; 
-        data.forEach(row => { 
-            const lat = parseFloat(row.latitude); 
-            const lng = parseFloat(row.longitude); 
-            const name = row.name || 'Unnamed Location'; 
-            const severity = (row.severity || '').toLowerCase(); 
-            const icon = icons[severity] || icons['ok']; 
+        header: true,
+        skipEmptyLines: true, 
+        complete: function(results) { 
+            const data = results.data; 
+            data.forEach(row => { 
+                const lat = parseFloat(row.latitude); 
+                const lng = parseFloat(row.longitude); 
+                const name = row.name || 'Unnamed Location'; 
+                const severity = (row.severity || '').toLowerCase(); 
+                const icon = icons[severity] || icons['ok']; 
 
-            if (!isNaN(lat) && !isNaN(lng)) { 
-                L.marker([lat, lng], { icon : icon}) 
-                .addTo(map) 
-                .bindPopup(`<strong>${name}</strong><br>Severity: ${severity}`); 
-            } 
-        }); 
-    } 
+                if (!isNaN(lat) && !isNaN(lng)) { 
+                    L.marker([lat, lng], { icon : icon}) 
+                    .addTo(map) 
+                    .bindPopup(`<strong>${name}</strong><br>Severity: ${severity}`); 
+                } 
+            }); 
+        } 
     }); 
 }) 
 .catch(error => { 
