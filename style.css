@@ -1,6 +1,22 @@
+#map {
+    height: 500px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    margin-bottom: 50px; /* Spațiu după hartă */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Stilizare subsol gri */
 .footer {
-    background-color: #444; /* Gri mai închis, fără transparență */
-    padding: 25px;
+    background-color: rgba(128, 128, 128, 0.5); /* Gri aproape transparent */
+    padding: 20px;
     text-align: center;
     border-radius: 10px;
     margin-top: 30px;
@@ -16,25 +32,25 @@
 .instagram-button {
     display: inline-flex;
     align-items: center;
-    background-color: #E1306C; /* Culoarea oficială Instagram, fără transparență */
+    background-color: rgba(225, 48, 108, 0.3); /* Fundal transparent */
     color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
+    padding: 6px 12px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     transition: 0.3s;
     margin-bottom: 10px;
 }
 
 .instagram-button img {
-    margin-right: 10px;
-    width: 22px;
-    height: 22px;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
 }
 
 .instagram-button:hover {
-    background-color: #C42D63; /* Puțin mai închis la hover */
+    background-color: rgba(196, 45, 99, 0.5); /* Mai vizibil la hover */
 }
 
 /* Stilizare text copyright */
@@ -43,5 +59,4 @@
     color: white;
     max-width: 600px;
     margin-top: 10px;
-    opacity: 0.8; /* Puțină transparență pentru un efect subtil */
 }
