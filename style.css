@@ -60,7 +60,7 @@ body {
 .instagram-button {
     display: inline-flex;
     align-items: center;
-    background-color: rgba(225, 48, 108, 0.3); /* Fundal transparent */
+    background-color: rgba(225, 48, 108, 0.4); /* Fundal transparent */
     color: white;
     padding: 6px 10px;
     border-radius: 5px;
