@@ -4,6 +4,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: white;
+    margin-bottom: 50px; /* Spațiu după hartă */
 }
 
 body {
@@ -12,39 +13,10 @@ body {
     margin: 20px;
 }
 
-.info-legend {
-    background: white;
-    padding: 10px 14px;
-    font-size: 14px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.15);
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    text-align: left;
-}
-
-.legend-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 8px;
-}
-
-.dot.red { background-color: #e74c3c; }
-.dot.yellow { background-color: #f1c40f; }
-.dot.green { background-color: #2ecc71; }
-
-/* Stilizare subsol */
+/* Stilizare subsol gri */
 .footer {
     background-color: rgba(128, 128, 128, 0.5); /* Gri aproape transparent */
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     border-radius: 10px;
     margin-top: 30px;
@@ -60,9 +32,9 @@ body {
 .instagram-button {
     display: inline-flex;
     align-items: center;
-    background-color: rgba(225, 48, 108, 0.4); /* Fundal transparent */
+    background-color: rgba(225, 48, 108, 0.3); /* Fundal transparent */
     color: white;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -72,7 +44,7 @@ body {
 }
 
 .instagram-button img {
-    margin-right: 6px;
+    margin-right: 8px;
     width: 18px;
     height: 18px;
 }
@@ -88,3 +60,4 @@ body {
     max-width: 600px;
     margin-top: 10px;
 }
+
