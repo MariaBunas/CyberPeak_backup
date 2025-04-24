@@ -45,25 +45,25 @@ body {
 .instagram-button {
     display: inline-flex;
     align-items: center;
-    background-color: #E1306C;
+    background-color: rgba(225, 48, 108, 0.8); /* Fundal Instagram cu transparență */
     color: white;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px; /* Text mai mic */
     transition: 0.3s;
     margin-top: 20px;
 }
 
 .instagram-button img {
-    margin-right: 10px;
-    width: 24px;
-    height: 24px;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
 }
 
 .instagram-button:hover {
-    background-color: #C42D63;
+    background-color: rgba(196, 45, 99, 0.9); /* Ușor mai închis la hover */
 }
 
 .center {
