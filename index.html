@@ -22,22 +22,20 @@
 <h2>🗺️ Hartă Interactivă - Cyberpeak</h2> 
 <div id="map"></div> 
 
-<!-- Subsol gri cu buton Instagram și mesaj de drepturi de autor -->
-<footer class="footer">
-    <div class="footer-content">
-        <a href="https://www.instagram.com/cyberpeak_/" target="_blank" class="instagram-button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            Pagina de Instagram
-        </a>
-        <p class="copyright-text">
-            Toate drepturile sunt rezervate echipei noastre. Utilizarea neautorizată a acestui material, 
-            inclusiv reproducerea, distribuirea, afișarea sau transmiterea oricărui conținut, este strict 
-            interzisă fără consimțământul expres al echipei noastre și al coordonatoarei de proiect, 
-            conform Legii nr. 8/1996 privind dreptul de autor.
-        </p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
-</body> 
-</html>
+<script> 
+// icons : 
+const icons = { 
+    ok: L.icon({ 
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png', 
+        shadowSize: [41, 41] 
+    }), 
+    warning: L.icon({ 
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png', 
+        iconSize: [25, 41], 
+        iconAnchor: [12, 41], 
+        popupAnchor: [1, -34], 
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images
