@@ -6,47 +6,71 @@
     background-color: white;
 }
 
-
-
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
-    
 }
 
 .info-legend {
-  background: white;
-  padding: 10px 14px;
-  font-size: 14px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  text-align: left;
+    background: white;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: left;
 }
 
 .legend-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
 }
 
 .dot {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 8px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
 }
 
-.dot.red {
-  background-color: #e74c3c;
+.dot.red { background-color: #e74c3c; }
+.dot.yellow { background-color: #f1c40f; }
+.dot.green { background-color: #2ecc71; }
+
+/* Stilizare buton Instagram */
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #E1306C;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    margin-top: 20px;
 }
 
-.dot.yellow {
-  background-color: #f1c40f;
+.instagram-button img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
 }
+
+.instagram-button:hover {
+    background-color: #C42D63;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
 
 .dot.green {
   background-color: #2ecc71;
