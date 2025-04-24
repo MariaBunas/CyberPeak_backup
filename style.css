@@ -45,7 +45,7 @@ body {
 .instagram-button {
     display: inline-flex;
     align-items: center;
-    background-color: rgba(225, 48, 108, 0.8); /* Fundal Instagram cu transparență */
+    background-color: rgba(225, 48, 108, 0.4); /* Fundal Instagram cu transparență */
     color: white;
     padding: 8px 12px;
     border-radius: 5px;
